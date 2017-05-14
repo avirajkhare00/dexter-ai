@@ -5,7 +5,7 @@ var Yaml = function (){
 };
 
 Yaml.createWorkerObject = function(location){
-    this.nativeObject = YAML.load(location);
+    this.nativeObject = YAML.parse(location);
     var workerObject = {
         id: this.nativeObject.id,
         shouldSkip: this.nativeObject.shouldSkip,
